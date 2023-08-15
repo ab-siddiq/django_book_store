@@ -13,6 +13,6 @@ class BookStoreModel(models.Model):
     book_name = models.CharField(max_length=30)
     author = models.CharField(max_length=30)
     edition = models.CharField(max_length=20)
-    publication_date = models.DateTimeField(auto_created=True)
-    last_published = models.DateTimeField(auto_created=True)
     category = models.CharField(choices=CATEGORY,max_length=30)
+    publication_date = models.DateTimeField(auto_now_add=True)
+    last_published = models.DateTimeField(auto_now=True)
